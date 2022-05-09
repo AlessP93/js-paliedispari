@@ -7,7 +7,7 @@
 //-----FUNCTION------
 
 //3. genera un numero random tra 1 e 5 della CPU
-function cpuRandom(min, max) {
+function getRndNumber(min, max) {
     return Math.floor((Math.random() * (max, min + 1) + min);
 }
 
@@ -27,7 +27,16 @@ const chooseUser = prompt("inserisci pari o dispari");
 //2. chiedi di scegliere tra pari e dispari tra 1 e 5
 const chooseNumber = Number(prompt("inserisci un numero tra 1 e 5"));
 
+//3. generiamo un numero random per la CPU
+const cpuRandom = getRndNumber(1, 5);
+
 //4. somma i 2 numeri
-sum = chooseNumber + cpuRandom(1, 5);
+const sum = cpuRandom + chooseNumber;
+
+//5. verifico se la somma è pari o dispari 
+const result = isEven(sum)
 
 //6. stabilisci chi ha vinto
+if (result === chooseUser){
+    alert("Hai vinto")
+} alert ("hai perso")
